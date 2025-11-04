@@ -34,7 +34,7 @@ def deposito(saldo, valor, extrato, /):
 
     return saldo, extrato
 
-def imprimir_extrato(saldo, *, extrato):
+def imprimir_extrato(saldo, /, *, extrato):
     print("\n================ EXTRATO ================")
     print("Não foram realizadas movimentações." if not extrato else extrato)
     print(f"\nSaldo: R$ {saldo:.2f}")
@@ -237,7 +237,7 @@ def main():
                     
         elif opcao == "q":
             break
-        
+
         else:
             print("Operação inválida, por favor selecione novamente a operação desejada.")
 
